@@ -1,0 +1,1 @@
+<input type="button" name="registrar_peril" id="registrar_perfil" value="Copiar" class="button gray small" onclick="CopiarPerfiles(); return false" />

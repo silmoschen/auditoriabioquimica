@@ -1,0 +1,13 @@
+www.centrobqsanjusto.com.ar
+
+ftp
+ftp://ftp.centrobqsanjusto.com.ar/
+
+usuario: sanjustodb
+pass: centroBQ09
+
+ftp nuevo
+
+
+actualizar@biosanmartin.com.ar
+Sanjusto12

@@ -1,0 +1,31 @@
+
+Usuario: x020vm10
+Password : VcOuPCuAdm5r
+base de datos: x020vm10_auditrqta
+
+
+
+
+/home/x020vm10/public_html/auditoria_reconquista/scriptmysql
+
+source /home/x020vm10/public_html/auditoria_reconquista/scriptmysql/salida1
+
+source /home/x020vm10/public_html/auditoria_reconquista/scriptmysql/cab_auditoria_hist
+
+source /home/x020vm10/public_html/auditoria_reconquista/scriptmysql/det_auditoria_hist
+
+gunzip -d 
+
+
+FTP actualizar auditoria:
+
+actualizar@auditoriabioquimica.com.ar
+us: actualizar@auditoriabioquimica.com.ar
+pa: centroBQ2013
+
+
+mysqldump -u root -pVcOuPCuAdm5r x020vm10_auditrqta > x020vm10_auditrqta.sql | zip > x020vm10_auditrqta.sql.gz
+mysqldump -u root -pVcOuPCuAdm5r x020vm10_auditsj > x020vm10_auditsj.sql | zip > x020vm10_auditsj.sql.gz
+mysqldump -u root -pVcOuPCuAdm5r x020vm10_auditvera > x020vm10_auditvera.sql | zip > x020vm10_auditvera.sql.gz
+
+mysqldump -u root -p VcOuPCuAdm5r auditoria_rqta | zip > auditoria_rqta.sql.gz

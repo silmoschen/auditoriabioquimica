@@ -1,0 +1,50 @@
+AFILIADO	El Documento DNI 16587302 no tiene los Datos Suficientes.
+DIAGNOSTICOS	El Codigo de Diagnostico 0001 es Incorrecto - P08.2
+DIAGNOSTICOS	El Codigo de Diagnostico 0002 es Incorrecto - R10.0 (ABDOMEN AGUDO) ERA CONTROL PACIENTE SANO
+DIAGNOSTICOS	El Codigo de Diagnostico 0005 es Incorrecto - T50.9
+DIAGNOSTICOS	El Codigo de Diagnostico 03705 es Incorrecto - E05
+DIAGNOSTICOS	El Codigo de Diagnostico 1950 es Incorrecto - O00
+DIAGNOSTICOS	El Codigo de Diagnostico 8010 es Incorrecto - R10
+DIAGNOSTICOS	El Codigo de Diagnostico Z06 es Incorrecto - ????
+PRACTICAS	El Cód. de Practica 660015 - ALBUMINA es Incorrecto
+PRACTICAS	El Cód. de Practica 660408 - GLOBULOS BLANCOS-RECUENTO Y FORMULA- MAT FECAL es Incorrecto
+PRACTICAS	El Cód. de Practica 660877 - T3 TRIIODOTIRONINA UPTAKE es Incorrecto
+PRACTICAS	El Cód. de Practica 661200 - URGENCIAS.- es Incorrecto
+
+
+update cab_auditoria set oms_cod='P08.2' WHERE OMS_COD='0001' and codos='000129';
+update cab_auditoria set oms_cod='R10.0' WHERE OMS_COD='0002' and codos='000129';
+update cab_auditoria set oms_cod='T50.9' WHERE OMS_COD='0005' and codos='000129';
+update cab_auditoria set oms_cod='E05' WHERE OMS_COD='03705' and codos='000129';
+update cab_auditoria set oms_cod='O00' WHERE OMS_COD='1950' and codos='000129';
+update cab_auditoria set oms_cod='R10' WHERE OMS_COD='8010' and codos='000129';
+
+
+PRACTICAS	El Cód. de Practica 668284 - PEPTIDO CITRULINADO CICLICO - Ac. IgG Anti- es Incorrecto
+
+
+Obra Social: PAMI
+Dx.: CONTROL DROGAS/MEDICAMENTOS EN TRATAMIENTO	Deshabilitar
+Este Diagnóstico Requiere Autorización Diferida
+Codigo	Determinacion	Frecuencia	T.Frec.	Baja
+660001	ACTO BIOQUIMICO	6	Meses	Editar	Borrar
+660174	COLESTEROL TOTAL	6	Meses	Editar	Borrar
+660475	HEMOGRAMA	6	Meses	Editar	Borrar
+660481	HEPATOGRAMA	6	Meses	Editar	Borrar
+660876	TRIGLICERIDOS	6	Meses	Editar	Borrar
+661135	MONITOREO de FARMACOS para ENF. CRONICAS (Anticonvulsivantes)	6	Meses	Editar	Borrar
+
+
+Obra Social: PAMI
+Dx.: DOLOR ABDOMINAL Y PELVICO	Deshabilitar
+Este Diagnóstico Requiere Autorización Diferida
+Codigo	Determinacion	Frecuencia	T.Frec.	Baja
+660001	ACTO BIOQUIMICO	0	Sin Limite	Editar	Borrar
+660022	AMILASA, SERICA	1	Meses	Editar	Borrar
+660297	ERITROSEDIMENTACION	7	Días	Editar	Borrar
+660412	GLUCEMIA	1	Meses	Editar	Borrar
+660475	HEMOGRAMA	7	Días	Editar	Borrar
+660481	HEPATOGRAMA	1	Meses	Editar	Borrar
+660711	ORINA COMPLETA	7	Días	Editar	Borrar
+660911	UROCULTIVO	20	Días	Editar	Borrar
+Finalizar Consulta 

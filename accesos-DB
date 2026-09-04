@@ -1,0 +1,11 @@
+auditoria_auditreco
+terminal1
+Jakarta89
+
+drop database auditoria_auditreco;
+create database auditoria_auditreco;
+CREATE USER 'terminal1'@'localhost' IDENTIFIED BY 'Jakarta89';
+GRANT ALL PRIVILEGES ON auditoria_auditreco.* TO 'terminal1'@'localhost';
+FLUSH PRIVILEGES;
+
+

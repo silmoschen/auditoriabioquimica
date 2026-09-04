@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="iso-8859-1"?><Mensaje xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <EncabezadoMensaje>
+        <VersionMsj />
+        <Rta>
+            <CodRtaGeneral>035</CodRtaGeneral>
+            <MensajeDisplay>669913 SUPERA TOPE</MensajeDisplay>
+            <MensajePrinter>                 OSDE                 
+                Organizacion de Servicios Directos  
+                Empresarios              
+                --------------------------------------
+                INFORMAR PRESTACION PRE-AUTORIZADA  
+                --------------------------------------
+                !!!SOLICITUD RECHAZADA!!!       
+                Nro.Transaccion  : 98-195132          
+                --------------------------------------
+                Prestador: LICHERI ADRIANA MYRIAM     
+                CUIT     : 27102354465                
+                Nro.Terminal: 2398                    
+                --------------------------------------
+                Afiliado : 62755524002                
+                Nombre: KNOTT KAREN                (F)
+                Nro.Plan: 2 210  Cond.IVA:            
+                Cobertura:                            
+                Medico Prescriptor: MS 005280         
+                Fecha de Atencion: 14/08/2023         
+                --------------------------------------
+                Prestacion.Tipo.Arancel.Cant.Observ   
+                --------------------------------------
+                660475     1    0      01             
+                (P660475) MODULO DE HEMOGRAMA.        
+                660746     1    0      01             
+                (P660746) PLAQUETAS, RECUENTO DE      
+                660481     1    0      01             
+                (P660481) MODULO DE HEPATOGRAMA.      
+                660412     1    0      01             
+                (P660412) GLUCEMIA O GLUCOSURIA (C/U  
+                660902     1    0      01             
+                (P660902) UREA, SÉRICA.               
+                660192     1    0      01             
+                (P660192) CREATININA - SÉRICA O URIN  
+                660174     1    0      01             
+                (P660174) COLESTEROL TOTAL            
+                661035     1    0      01             
+                (P661035) COLESTEROL HDL (HDL-C)      
+                661040     1    0      01             
+                (P661040) COLESTEROL LDL (LDL-C)      
+                660876     1    0      01             
+                (P660876) TRIGLICERIDOS (TG)          
+                660133     1    0      01             
+                (P660133) CALCEMIA TOTAL (CA)         
+                669913     1    0      01   ST        
+                (P669913) VITAMINA D3 (25-HIDROXICAL  
+                660938     1    0      01             
+                (P660938) VITAMINA B12.               
+                660189     1    0      01             
+                (P660189) CORTISOL.                   
+                660865     1    0      01             
+                (P660865) TIROTROFINA - TSH           
+                660866     1    0      01             
+                (P660866) TIROXINA TOTAL - T4         
+                660835     1    0      01             
+                (P660835) SEROTONINA - SÉRICA.        
+                660001     1    0      01             
+                (P660001) ACTO BIOQUÍMICO             
+                                      
+                669913 SUPERA TOPE                    
+                                      
+                (008)                                 
+                --------------------------------------
+                14/08/2023 17:33 PuntoSalud.com    
+            </MensajePrinter>
+            <CodigoBarras>20230814IT195132</CodigoBarras>
+            <CodigoQR />
+        </Rta>
+        <GeneradorRespuesta>30546741253</GeneradorRespuesta>
+        <NroReferencia>323195132</NroReferencia>
+        <NroReferenciaCancel />
+        <TipoTransaccion>02L</TipoTransaccion>
+        <IdMsj>570</IdMsj>
+        <InicioTrx>
+            <FechaTrx>20230814</FechaTrx>
+            <HoraTrx>173302</HoraTrx>
+        </InicioTrx>
+        <SetCaracteres />
+        <Financiador>
+            <CodigoFinanciador>2608</CodigoFinanciador>
+            <CuitFinanciador>30546741253</CuitFinanciador>
+        </Financiador>
+        <Prestador>
+            <CuitPrestador>27102354465</CuitPrestador>
+            <RazonSocial>LICHERI ADRIANA MYRIAM</RazonSocial>
+            <CodigoParaFinanciador>000002608</CodigoParaFinanciador>
+            <NroTransaccionInterno />
+        </Prestador>
+    </EncabezadoMensaje>
+    <EncabezadoAtencion>
+        <Efector>
+            <TipoMatriculaEfector />
+            <NroMatriculaEfector />
+            <CuitEfector />
+        </Efector>
+        <Prescriptor>
+            <FechaReceta>20230814</FechaReceta>
+            <ApellidoPrescriptor>YORISGISELANATALIA</ApellidoPrescriptor>
+            <NombrePrescriptor>YORISGISELANATALIA</NombrePrescriptor>
+            <ProvinciaPrescriptor>S</ProvinciaPrescriptor>
+            <TipoPrescriptor>M</TipoPrescriptor>
+            <NroMatriculaPrescriptor>5280</NroMatriculaPrescriptor>
+            <CuitPrescriptor />
+            <EspecialidadPrescriptor />
+            <CodParaFinanciadorPrescriptor />
+        </Prescriptor>
+        <Beneficiario>
+            <ApellidoBeneficiario>KNOTT KAREN</ApellidoBeneficiario>
+            <NombreBeneficiario />
+            <Sexo>F</Sexo>
+            <FechaNacimiento>19870521</FechaNacimiento>
+        </Beneficiario>
+        <Credencial>
+            <NumeroCredencial>62755524002</NumeroCredencial>
+            <Track />
+            <VersionCredencial>108</VersionCredencial>
+            <PlanCredencial>2210</PlanCredencial>
+            <CondicionIVA>G</CondicionIVA>
+        </Credencial>
+        <CoberturaEspecial />
+        <Preautorizacion>
+            <CodigoPreautorizacion />
+            <FechaPreautorizacion />
+        </Preautorizacion>
+        <Documentacion />
+        <Atencion>
+            <FechaAtencion>20230814</FechaAtencion>
+            <HoraAtencion>170849</HoraAtencion>
+        </Atencion>
+        <Diagnostico>
+            <CodDiagnostico />
+            <DescripcionDiagnostico />
+            <Nomenclador />
+        </Diagnostico>
+        <CodFinalizacionTratamiento />
+        <MensajeParaFinanciador />
+    </EncabezadoAtencion>
+    <DetalleProcedimientos>
+        <NroItem>1</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660475</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>MODULO DE HEMOGRAMA.</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>2</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660746</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>PLAQUETAS, RECUENTO DE</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>3</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660481</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>MODULO DE HEPATOGRAMA.</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>4</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660412</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>GLUCEMIA O GLUCOSURIA (C/U</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>5</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660902</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>UREA, SÉRICA.</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>6</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660192</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>CREATININA - SÉRICA O URIN</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>7</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660174</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>COLESTEROL TOTAL</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>8</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>661035</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>COLESTEROL HDL (HDL-C)</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>9</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>661040</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>COLESTEROL LDL (LDL-C)</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>10</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660876</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>TRIGLICERIDOS (TG)</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>11</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660133</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>CALCEMIA TOTAL (CA)</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>12</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>669913</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>VITAMINA D3 (25-HIDROXICAL</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>005</CodRta>
+        <MensajeRta>SUPERA TOPE</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>13</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660938</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>VITAMINA B12.</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>14</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660189</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>CORTISOL.</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>15</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660865</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>TIROTROFINA - TSH</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>16</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660866</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>TIROXINA TOTAL - T4</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>17</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660835</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>SEROTONINA - SÉRICA.</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+    <DetalleProcedimientos>
+        <NroItem>18</NroItem>
+        <CodPreautorizacion />
+        <CodPrestacion>660001</CodPrestacion>
+        <CodAlternativo />
+        <PiezaDental />
+        <CaraDental />
+        <TipoPrestacion>1</TipoPrestacion>
+        <ArancelPrestacion>0</ArancelPrestacion>
+        <CantidadSolicitada>1</CantidadSolicitada>
+        <CantidadAprobada>0</CantidadAprobada>
+        <SaldoPrestaciones />
+        <DescripcionPrestacion>ACTO BIOQUÍMICO</DescripcionPrestacion>
+        <Facturacion />
+        <ImporteACargoAfiliado />
+        <ImporteCobertura />
+        <CodRta>000</CodRta>
+        <MensajeRta>Autorizado</MensajeRta>
+        <CodDiagnosticoPrestacion />
+        <IVA />
+    </DetalleProcedimientos>
+</Mensaje>

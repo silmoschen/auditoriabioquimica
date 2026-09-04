@@ -1,0 +1,16 @@
+14/02/2017
+
+cambiar idperfil de int a varchar
+ver campos null
+
+23/02/2017
+
+CREATE TABLE  `obsocial_planes` (
+  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `descrip` varchar(255) NOT NULL,
+  `fk_codos` varchar(6) NOT NULL,
+  `cant_afiliados` int(10) unsigned DEFAULT NULL,
+  `codigo1` varchar(45) DEFAULT NULL,
+  `codigo2` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

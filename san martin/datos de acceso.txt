@@ -1,0 +1,10 @@
+www.biosanmartin.com.ar
+
+ftp
+ftp://ftp.biosanmartin.com.ar/
+
+usuario: sanmartin
+pass: Jakarta89
+
+ftp: actualizar
+usuario: SMartin10

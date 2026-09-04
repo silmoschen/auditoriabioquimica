@@ -1,0 +1,35 @@
+usuario: biovera@bioqsvera.com.ar
+clave: Verbioq09
+www.bioqsvera.com.ar
+ftp.bioqsvera.com.ar
+
+ftp: actualizar
+pass: Centrobq09
+
+mySQL
+
+<?php
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+  $host = "localhost";
+  $username = 'terminalv1';
+  $passw = "Jakarta@89";
+  $dbdatos = 'auditoria_vera';
+  
+  /*
+  $host = "localhost";
+  $username = 'x020vm10';
+  $passw = "VcOuPCuAdm5r";
+  $dbdatos = 'x020vm10_auditrqta';
+   * 
+   */
+  
+  $con = mysql_connect($host, $username, $passw);
+  mysql_select_db($dbdatos, $con);
+
+?>
+
+

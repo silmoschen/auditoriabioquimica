@@ -1,0 +1,1 @@
+INSERT INTO bioqafil (codos, nrodoc, nombre, observacion, fechanac, depto, diferido, direccion, id_beneficio, id_parentesco, sexo, tipo_doc, retiva, idos) VALUES ('121057', '6585701', 'Lopez Fara Valentina', 'PMI                 ', '', '', '', '2', '', '', 'N', '', 'N', '191000')

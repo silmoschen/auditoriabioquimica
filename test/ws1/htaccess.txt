@@ -1,0 +1,1 @@
+RewriteRule ^([a-zA-Z -]*)$ index.php?name-$1 [nc,qsq]

@@ -1,0 +1,59 @@
+<table border="0px"  width='500px'>
+<tr>
+ <td width="30px"><b>Codigo</b></td>
+ <td width="300px" align = "left"><b>Obra Social</b></td>
+ <td width="300px" align = "left"><b>Leyenda</b></td>
+ <td width="50px" align = "right"><b>Borrar</b></td>
+</tr>
+</table>
+
+<?php
+include_once('__routes.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/classes/cObSocial.php');
+$obsocial = new cObSocial();
+
+$RegistrosAMostrar=15;
+
+//estos valores los recibo por GET
+if(isset($_GET['pag'])){
+	$RegistrosAEmpezar=($_GET['pag']-1)*$RegistrosAMostrar;
+	$PagAct=$_GET['pag'];        
+//caso contrario los iniciamos
+}else{
+	$RegistrosAEmpezar=0;
+	$PagAct=1;
+	
+}
+
+if(isset($_GET['filtro'])){
+  $filtro = $_REQUEST['filtro'];
+} else {
+  $filtro = "";
+}
+
+if(isset($_GET['filtro'])){
+  $edbaja = $_GET['edbaja'];
+} else {
+    $edbaja = "";
+}
+
+$Resultado = $obsocial->getListLeyendas();
+
+echo "<table border='0px' width='500px'>";
+while($MostrarFila=mysql_fetch_array($Resultado)){
+    echo "<tbody align = 'left'>";
+    echo "<tr>";
+    
+    $obsocial->getObject($MostrarFila['codos']);
+    
+    echo "<td width='300px'>". $obsocial->getNombre() ."</td>";
+    echo "<td width='300px'>".$MostrarFila['descrip']."</td>";
+
+    $borra = "Borrar("."'".$MostrarFila['codos']."'".")";
+    echo '<td width="50px"><a href="javascript://" onclick="' . $borra . '">Borrar</a></td>';
+    echo "</tr>";
+    echo "</tbody>";
+}
+echo "</table>";
+
+?>
