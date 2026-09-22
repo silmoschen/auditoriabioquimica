@@ -1224,7 +1224,8 @@ if ($obsocial->_reglaNegocio == 2) {
                                            <CuitFinanciador>" . $cuitentidad . "</CuitFinanciador>
                                    </Financiador>
                                    <Prestador>
-                                           <CuitPrestador>" . $cuitprestador . "</CuitPrestador>                                           
+                                           <CuitPrestador>" . $cuitprestador . "</CuitPrestador>
+                                           <SucursalPrestador>" . $spp . "</SucursalPrestador>     
                                            <RazonSocial>OSDE</RazonSocial>
                                            <CodigoParaFinanciador>" . $codigofinanciador . "</CodigoParaFinanciador>
                                            <NroTransaccionInterno/>
@@ -1848,8 +1849,8 @@ if ($obsocial->_reglaNegocio == 4) {
                      * 
                      */                    
                             
-                    //$result = $client->__soapCall('fnautoriza', array('usuario' => $usuario, 'pass' => $pass, 'ns' => $ns, 'apno' => $apno, 'ndoc' => $ndoc, 'cuit' => $cuit, 'matrimed' => $matrimed, 'matritipo' => $matritipo, 'matriapno' => $matriapno, 'diag1' => $diag1, 'diag2' => $diag2, 'diag3' => $diag3, 'diaga' => $diaga, 'fpres' => $fpres, 'tipo' => $tipo, 'fint' => $fint, 'hint' => $hint, 'cint' => $cint, 'tint' => $tint, 'obs' => $obs, 'nauti' => $nauti, 'fauti' => $fauti, 'prestaciones' => $prestacion));
-                    $result = $client->__soapCall('fnautoriza', array('usuario' => $usuario, 'pass' => $pass, 'ns' => $ns, 'apno' => $apno, 'ndoc' => $ndoc, 'cuit' => $cuit, 'matrimed' => $matrimed, 'matritipo' => $matritipo, 'matriapno' => $matriapno, 'diag1' => $diag1, 'diag2' => $diag2, 'diag3' => $diag3, 'diaga' => $diaga, 'fpres' => $fpres, 'tipo' => $tipo, 'fint' => $fint, 'hint' => $hint, 'cint' => $cint, 'tint' => $tint, 'obs' => $obs, 'nauti' => $nauti, 'fauti' => $fauti, 'prestaciones' => $prestacion, 'token' => $ttoken));
+                    $result = $client->__soapCall('fnautoriza', array('usuario' => $usuario, 'pass' => $pass, 'ns' => $ns, 'apno' => $apno, 'ndoc' => $ndoc, 'cuit' => $cuit, 'matrimed' => $matrimed, 'matritipo' => $matritipo, 'matriapno' => $matriapno, 'diag1' => $diag1, 'diag2' => $diag2, 'diag3' => $diag3, 'diaga' => $diaga, 'fpres' => $fpres, 'tipo' => $tipo, 'fint' => $fint, 'hint' => $hint, 'cint' => $cint, 'tint' => $tint, 'obs' => $obs, 'nauti' => $nauti, 'fauti' => $fauti, 'prestaciones' => $prestacion));
+                    //$result = $client->__soapCall('fnautoriza', array('usuario' => $usuario, 'pass' => $pass, 'ns' => $ns, 'apno' => $apno, 'ndoc' => $ndoc, 'cuit' => $cuit, 'matrimed' => $matrimed, 'matritipo' => $matritipo, 'matriapno' => $matriapno, 'diag1' => $diag1, 'diag2' => $diag2, 'diag3' => $diag3, 'diaga' => $diaga, 'fpres' => $fpres, 'tipo' => $tipo, 'fint' => $fint, 'hint' => $hint, 'cint' => $cint, 'tint' => $tint, 'obs' => $obs, 'nauti' => $nauti, 'fauti' => $fauti, 'prestaciones' => $prestacion, 'token' => $ttoken));
 
                     $call = array('usuario' => $usuario, 'pass' => $pass, 'ns' => $ns, 'apno' => $apno, 'ndoc' => $ndoc, 'cuit' => $cuit, 'matrimed' => $matrimed, 'matritipo' => $matritipo, 'matriapno' => $matriapno, 'diag1' => $diag1, 'diag2' => $diag2, 'diag3' => $diag3, 'diaga' => $diaga, 'fpres' => $fpres, 'tipo' => $tipo, 'fint' => $fint, 'hint' => $hint, 'cint' => $cint, 'tint' => $tint, 'obs' => $obs, 'nauti' => $nauti, 'fauti' => $fauti);
 
@@ -1882,18 +1883,13 @@ if ($obsocial->_reglaNegocio == 4) {
                         $auditoria->guardarMensajeRPC($nroauditoria, $result->mensajes);
                     
                     // 02/10/2025 - si el token es inválido la anulamos
-                    
-                    if ($result->mensajes == '2. NO SE ENCONTRO EL TOKEN') {
+                    /*
+                    if ($result->mensajes == 'NO SE ENCONTRO EL TOKEN') {
                         $auditoria->AnularOrden($nroauditoria);
                         echo '<h1>' . $result->mensajes . '</h1>';
-                        echo '<h2>Orden Anulada</h2>';
                     }
-                    
-                    if ($result->mensajes == '') {
-                        $auditoria->AnularOrden($nroauditoria);
-                        echo '<h1>SIN TOKEN</h1>';
-                        echo '<h2>Orden Anulada</h2>';
-                    }                                          
+                     * 
+                     */
 
                     print_r($result);
                 } catch (Exception $e) {

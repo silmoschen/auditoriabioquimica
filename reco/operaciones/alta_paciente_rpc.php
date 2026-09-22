@@ -1298,8 +1298,7 @@ if ($os->_reglaNegocio == 2) {
 			<CuitFinanciador>" . $cuitentidad . "</CuitFinanciador>
                 </Financiador>
 		<Prestador>
-			<CuitPrestador>" . $cuitprestador . "</CuitPrestador>
-                        <SucursalPrestador>" . $spp . "</SucursalPrestador> 
+			<CuitPrestador>" . $cuitprestador . "</CuitPrestador>                        
 		</Prestador>
 	</EncabezadoMensaje>
 	<EncabezadoAtencion>
