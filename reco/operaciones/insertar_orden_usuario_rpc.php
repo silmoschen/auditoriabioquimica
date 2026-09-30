@@ -1209,7 +1209,9 @@ if ($obsocial->_reglaNegocio == 2) {
             if ($afiliado->getObject($codos, $nrodoc)) {
 
                 $idmsg = rand(1, 9999);
-
+                
+                //==========================================================================
+    
                 $msg = "<Mensaje>
                             <EncabezadoMensaje>
                                    <VersionMsj>" . $version . "</VersionMsj>
@@ -1258,6 +1260,9 @@ if ($obsocial->_reglaNegocio == 2) {
                            </EncabezadoAtencion>" .
                         $linea .
                         "</Mensaje>";
+                
+                
+                //==============================================================
 
                 //echo $msg;
                 //exit;

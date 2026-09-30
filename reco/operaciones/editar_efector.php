@@ -46,10 +46,12 @@ if ($modo == 2) {
         $baja = 'checked="checked"';
     $mparametro2 = $obj->parametro2;
     $mparametro3 = $obj->parametro3;
-    if ($obj->getNivel2())
+    if ($obj->getNivel2() == 1)
         $nivel2 = 'checked="checked"';    
     
 }
+
+echo $obj->nivel2 . ' sssss';
 
 $especialidad = new cEspecialidades();
 $tp = new cTipoPrestadores();

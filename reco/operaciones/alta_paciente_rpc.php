@@ -1277,8 +1277,8 @@ if ($os->_reglaNegocio == 2) {
     $track = '';
     $versioncredencial = $track1; //'891';
     
-    $spp = ''; // Para Efectores con varios puntos de atención    
-    if ($efector->getNivel2()) $spp = $terminal;
+
+    if ($efector->getNivel2() == 0) {
 
     $msg = "<Mensaje>
 	<EncabezadoMensaje>
@@ -1319,6 +1319,56 @@ if ($os->_reglaNegocio == 2) {
 	<DetalleProcedimientos/>
 </Mensaje>";
 
+    }
+    
+    //==========================================================================
+    
+    if ($efector->getNivel2() == 1) {
+
+    $msg = "<Mensaje>
+	<EncabezadoMensaje>
+		<VersionMsj>" . $version . "</VersionMsj>
+		<TipoTransaccion>01A</TipoTransaccion>
+		<IdMsj> $idmsg </IdMsj>
+		<InicioTrx>
+			<FechaTrx>" . $ftrans . "</FechaTrx>
+                        <HoraTrx>" . $htrans . "</HoraTrx>
+		</InicioTrx>
+                <Terminal>
+                        <TipoTerminal>PC</TipoTerminal>
+                        <NumeroTerminal>$terminal</NumeroTerminal>
+                </Terminal>
+		<Financiador>
+			<CodigoFinanciador>" . $codigofinanciador . "</CodigoFinanciador>
+			<CuitFinanciador>" . $cuitentidad . "</CuitFinanciador>
+                </Financiador>
+		<Prestador>
+			<CuitPrestador>" . $cuitprestador . "</CuitPrestador>
+                        <SucursalPrestador>$terminal</SucursalPrestador>    
+		</Prestador>
+	</EncabezadoMensaje>
+	<EncabezadoAtencion>
+		<Efector/>
+		<Prescriptor/>
+		<Credencial>
+			<NumeroCredencial>" . $nrodoc . "</NumeroCredencial>
+                        <Track>" . $track . "</Track> 
+                        <VersionCredencial>" . $versioncredencial . "</VersionCredencial>  
+		</Credencial>
+		<Preautorizacion/>
+		<Documentacion/>
+		<Atencion/>
+		<Diagnostico/>
+		<CodFinalizacionTratamiento/>
+		<MensajeParaFinanciador/>
+	</EncabezadoAtencion>
+	<DetalleProcedimientos/>
+</Mensaje>";
+
+    }          
+    
+    //==========================================================================
+    
     //$xmlString = $msg->asXML();
 
     $wsres->crear($codos, $idprof, $nrodoc, $msg, 7);

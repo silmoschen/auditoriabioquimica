@@ -54,7 +54,7 @@ class cEfector {
     // actualiza tupla
     function actualizar($codigo, $nombre, $usuario, $pass, $direccion, $nrocuit, $email, $id_especialidad, $id_tipoprestador, $fechamat, $matricula_nac, $matricula1, $parametro2, $parametro3, $nivel2) {
         $query = "UPDATE profesio SET nombre = '$nombre', usuario = '$usuario', pass = '$pass', direccion = '$direccion', nrocuit = '$nrocuit', email = '$email', id_especialidad = '$id_especialidad', tipo_prestador = $id_tipoprestador, fechamat = '$fechamat', matricula_nac = '$matricula_nac', parametro1 = '$matricula1', parametro2 = '$parametro2', parametro3 = '$parametro3', nivel2 = $nivel2 WHERE idprof = '$codigo'";
-        $this->sql = $query;
+        $this->sql = $query;        
         $result = mysql_query($query);
         if (!$result)
             return false;
@@ -82,7 +82,7 @@ class cEfector {
             $this->parametro1 = $fila['parametro1'];
             $this->parametro2 = $fila['parametro2'];
             $this->parametro3 = $fila['parametro3'];
-            $this->nivel2 = $fila['nivel2'];
+            $this->nivel2 = $fila['nivel2'];            
             $find = true;
         }
         if ($find) {

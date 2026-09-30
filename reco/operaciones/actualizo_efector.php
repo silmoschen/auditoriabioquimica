@@ -35,7 +35,7 @@ if (strlen(trim($_REQUEST[codigo])) == 6 and strlen(trim($_REQUEST[nombre])) > 0
   //y usamos su m�todo crear
   sleep(2);
   $obj=new cEfector;
-  if ($obj->actualizar($codigo, $nombre, $usuario, $pass, $direccion, $nrocuit, $email, $id_especialidad, $id_tipoprestador, $fechamat, $matricula_nac, $matricula1, $parametro2, $parametro3, $nivel2)==true){
+  if ($obj->actualizar($codigo, $nombre, $usuario, $pass, $direccion, $nrocuit, $email, $id_especialidad, $id_tipoprestador, $fechamat, $matricula_nac, $matricula1, $parametro2, $parametro3, $nivel2)==true){  
   }else{
       echo "Error de grabacion - " . $obj->getSQL();
   }  

@@ -205,6 +205,7 @@ $u = new cUtiles;
             }
 
             function Registrar(codigo, nombre, usuario, pass, direccion, nrocuit, email, especialidad, id_tipoprestador, fechamat, matricula_nac, modo, matricula1, parametro2, parametro3, nivel2){
+                
                 if (codigo.length == 0) {
                     alert('Código de Efector Incorrecto ...!');
                     return false;
@@ -245,7 +246,7 @@ $u = new cUtiles;
                         divMensaje.innerHTML = ajax1.responseText;
                     }
                     //llamar a funcion para limpiar los inputs
-                    Pagina(1, nombre, 'N');
+                    //Pagina(1, nombre, 'N');
                 }
 
                 ajax1.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
