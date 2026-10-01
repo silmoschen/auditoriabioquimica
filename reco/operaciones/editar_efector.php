@@ -51,8 +51,6 @@ if ($modo == 2) {
     
 }
 
-echo $obj->nivel2 . ' sssss';
-
 $especialidad = new cEspecialidades();
 $tp = new cTipoPrestadores();
 ?>
