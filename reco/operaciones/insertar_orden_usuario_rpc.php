@@ -639,7 +639,8 @@ if ($obsocial->_reglaNegocio == 5) {
 
                     // Si la transacción falla
                     if ($result->Estado != 'OK') {
-                        $auditoria->borrarOrden($nroauditoria);
+                        //$auditoria->borrarOrden($nroauditoria);
+                        $auditoria->AnularOrden($nroauditoria);
                         echo '<h1>Se Produjo un Error al Autorizar la Orden</h1>';
                         echo '<h2>Vuelva a Ingresarla</h2>';
                     }
@@ -647,7 +648,8 @@ if ($obsocial->_reglaNegocio == 5) {
                     echo '<hr/>';
                 } catch (Exception $e) {
                     trigger_error($e->getMessage(), E_USER_WARNING);
-                    $auditoria->borrarOrden($nroauditoria);
+                    //$auditoria->borrarOrden($nroauditoria);
+                    $auditoria->AnularOrden($nroauditoria);
                     echo '<h1>Se Produjo un Error al Autorizar la Orden</h1>';
                     echo '<h2>Vuelva a Ingresarla</h2>';
                 }

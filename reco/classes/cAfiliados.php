@@ -266,19 +266,19 @@ class cAfiliados {
 
     function getConsultaAfiliados($codos, $filtro, $tipof, $RegistrosAEmpezar, $RegistrosAMostrar) {
         if ($filtro == '' or $filtro == 'undefined') {
-            $this->res = mysql_query("SELECT codos, nrodoc, nombre FROM bioqafil WHERE codos = '$codos' ORDER BY nombre LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
+            $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, inactivo FROM bioqafil WHERE codos = '$codos' ORDER BY nombre LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
         } else {
             if ($tipof == '1') {
-                $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, retiva FROM bioqafil WHERE codos = '$codos' AND nombre LIKE '$filtro%' ORDER BY nombre LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
+                $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, inactivo, retiva FROM bioqafil WHERE codos = '$codos' AND nombre LIKE '$filtro%' ORDER BY nombre LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
             }
             if ($tipof == '2') {
-                $this->res = mysql_query("SELECT codos, nrodoc, nombre FROM bioqafil WHERE codos = '$codos' AND nrodoc = '$filtro' ORDER BY nrodoc LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
+                $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, inactivo FROM bioqafil WHERE codos = '$codos' AND nrodoc = '$filtro' ORDER BY nrodoc LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
             }
             if ($tipof == '3') {
-                $this->res = mysql_query("SELECT codos, nrodoc, nombre FROM bioqafil WHERE codos = '$codos' AND id_beneficio = '$filtro' ORDER BY nrodoc LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
+                $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, inactivo FROM bioqafil WHERE codos = '$codos' AND id_beneficio = '$filtro' ORDER BY nrodoc LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
             }
             if ($tipof == '4') {
-                $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, retiva FROM bioqafil WHERE codos = '$codos' AND nrodoc LIKE '$filtro' ORDER BY nombre LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
+                $this->res = mysql_query("SELECT codos, nrodoc, nombre, id_beneficio, inactivo, retiva FROM bioqafil WHERE codos = '$codos' AND nrodoc LIKE '$filtro' ORDER BY nombre LIMIT $RegistrosAEmpezar, $RegistrosAMostrar");
             }
             if ($tipof == '5') {
                 $this->res = mysql_query("SELECT * FROM bioqafil WHERE codos = '$codos' AND nrodoc = '$filtro'");

@@ -427,7 +427,9 @@ if (!isset($_SESSION['susuario'])) {
             <ul> <!-- Ponemos un submen� nivel 1 para la opci�n trucos con 1 opci�n-->
                 <?php
                 echo '<li><a href="/' . $ruta . '/consulta_de_ordenes.php">Consulta e Impresión de Ordenes</a></li>';
-                echo '<li><a href="/' . $ruta . '/consulta_de_ordenes_coseguro_iapos.php">Validación Bonos IAPOS</a></li>';
+                //echo '<li><a href="/' . $ruta . '/consulta_de_ordenes_coseguro_iapos.php">Validación Bonos IAPOS</a></li>';
+                echo '<li><a href="/' . $ruta . '/calcular_coseguro.php">Calcular Coseguro</a></li>';
+                echo '<li><a href="/' . $ruta . '/padron_afiliados_cons.php">Padrón de Afiliados</a></li>';
                 ?>
         </li>
         </ul>

@@ -122,8 +122,8 @@ class cAuditoria {
             return false;
         }
     }
-    
-        // inserta tupla con token
+
+    // inserta tupla con token
     function crear2($nroauditoria, $efector, $fecha, $codos, $idzona, $nrodoc, $idprof, $observacion, $iddiag, $idperfil, $fepedido, $autoriza, $profcab, $token, $numerodoc) {
         $f = substr($nroauditoria, 6, 8);
         $fp = $this->utiles->getFechaAAAAMMDD($fepedido);
@@ -666,9 +666,10 @@ class cAuditoria {
             if ($this->obrasocial->_reglaNegocio == 3) {
                 $tipo_plan = ' Plan: ' . $this->afiliado->getObservacion();
             }
-            
+
             $token = ' ';
-            if ($fila['token'] != '') $token = ' Token: <b>' . $fila['token'] . '</b>'; 
+            if ($fila['token'] != '')
+                $token = ' Token: <b>' . $fila['token'] . '</b>';
 
             echo '<br><b>' . $this->entidad->getNombre() . '</b><br>';
             echo '<font face= "Arial" size="1px"> Obra Social: <b>' . $this->obrasocial->getNombre() . '</b>' . ' - Trans.: ' . substr($fila['nroauditoria'], 6, 30) . '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . '<i>' . $ldf . '</i>' . $token . '<br>'; //substr($fila['nroauditoria'], strlen($fila['nroauditoria'])- 6, 6) . '<br>';
@@ -855,7 +856,7 @@ class cAuditoria {
 
                 // 22-11-2018 - tome maximo: 20
                 //if ($totalbonos > 20)
-                    //$totalbonos = 20;
+                //$totalbonos = 20;
 
                 echo 'Corresponden <b>' . $totalbonos . '</b> Bonos.';
 
@@ -1012,12 +1013,12 @@ class cAuditoria {
                     echo '<p align="center"><font size="3" color="#CD5C5C">' . $fila['obsauditor'] . '</font></p>';
                 }
             }
-            
+
             $this->obrasocial->getObjectLeyenda($fila['codos']);
             if ($this->obrasocial->getLeyendaOS() != '') {
                 echo '</br>';
                 echo '<b><font size="3" color="#330099">' . $this->obrasocial->getLeyendaOS() . '</font></b>';
-            }                       
+            }
 
             echo '</font><br>';
 
@@ -1031,24 +1032,24 @@ class cAuditoria {
             //===== MENSAJES o NOTIFICACIONES
 
             /*
-            $osn = json_decode($this->osnot->getObjectJSActiva($fila['codos']));
-            if ($osn != null) {
-                echo '<br/>';
-                if ($osn[0]->m1 != '')
-                    echo $osn[0]->m1 . '<br/>';
-                if ($osn[0]->m2 != '')
-                    echo $osn[0]->m2 . '<br/>';
-                if ($osn[0]->m3 != '')
-                    echo $osn[0]->m3 . '<br/>';
-                if ($osn[0]->m4 != '')
-                    echo $osn[0]->m4 . '<br/>';
-                if ($osn[0]->m5 != '')
-                    echo $osn[0]->m5 . '<br/>';
-                if ($osn[0]->m6 != '')
-                    echo $osn[0]->m6 . '<br/>';
-                if ($osn[0]->m7 != '')
-                    echo $osn[0]->m7 . '<br/>';
-            }             
+              $osn = json_decode($this->osnot->getObjectJSActiva($fila['codos']));
+              if ($osn != null) {
+              echo '<br/>';
+              if ($osn[0]->m1 != '')
+              echo $osn[0]->m1 . '<br/>';
+              if ($osn[0]->m2 != '')
+              echo $osn[0]->m2 . '<br/>';
+              if ($osn[0]->m3 != '')
+              echo $osn[0]->m3 . '<br/>';
+              if ($osn[0]->m4 != '')
+              echo $osn[0]->m4 . '<br/>';
+              if ($osn[0]->m5 != '')
+              echo $osn[0]->m5 . '<br/>';
+              if ($osn[0]->m6 != '')
+              echo $osn[0]->m6 . '<br/>';
+              if ($osn[0]->m7 != '')
+              echo $osn[0]->m7 . '<br/>';
+              }
              */
 
             //==================================================================
@@ -1122,10 +1123,10 @@ class cAuditoria {
             $ndoc = $n;
             if (substr($n, 0, 7) == '8000060' || substr($n, 0, 7) == '8000061' || substr($n, 0, 7) == '8000062' || substr($n, 0, 7) == '8000063' || substr($n, 0, 7) == '8000064' || substr($n, 0, 7) == '8000065' || substr($n, 0, 7) == '8000066')
                 $ndoc = substr($n, 7, 11);
-            
+
             $o = '';
             $a = '';
-            
+
             $linea = $this->utiles->StringLongitudFija($fila['nroauditoria'], 30) .
                     $this->utiles->StringLongitudFija($fila['efector'], 6) .
                     $this->utiles->StringLongitudFija($fila['fecha'], 8) .
@@ -1150,13 +1151,12 @@ class cAuditoria {
                     $this->utiles->StringLongitudFija($fila['profcab'], 12) .
                     $this->utiles->StringLongitudFija($fila['expediente'], 20) .
                     $this->utiles->StringLongitudFija($fila['nroautorizacion'], 20) .
-                    
                     $this->utiles->StringLongitudFija($fila['token'], 20) .
                     $this->utiles->StringLongitudFija($fila['numerodoc'], 20) .
                     " \r\n";
 
             fwrite($cab, $linea);
-            
+
             $lineaaut = $this->utiles->StringLongitudFija($fila['nroauditoria'], 30) . $this->utiles->StringLongitudFija($fila['nroautorizacion'], 20) .
                     " \r\n";
             fwrite($aut, $lineaaut);
@@ -1777,8 +1777,8 @@ class cAuditoria {
         $query = "UPDATE cab_auditoria SET transaccion = " . "'" . $transaccion . "'" . ", diferida = " . "'" . $diferida . "'" . " WHERE nroauditoria = " . '"' . $nroauditoria . '"';
         $result = mysql_query($query);
     }
-    
-     function actualizarTransaccionToken($nroauditoria, $transaccion, $diferida, $token) {
+
+    function actualizarTransaccionToken($nroauditoria, $transaccion, $diferida, $token) {
         $query = "UPDATE cab_auditoria SET transaccion = '$transaccion' , diferida = '$diferida', token = '$token' WHERE nroauditoria = '$nroauditoria'";
         $result = mysql_query($query);
     }
@@ -1794,10 +1794,10 @@ class cAuditoria {
         $query = "UPDATE cab_auditoria SET transaccion = " . "'" . $transaccion . "'" . ", diferida = " . "'" . $diferida . "'" . ", nroautorizacion = " . "'" . $autorizacion . "'" . " WHERE nroauditoria = " . '"' . $nroauditoria . '"';
         $result = mysql_query($query);
     }
-    
+
     function actualizarTransaccionAutorizadaToken($nroauditoria, $transaccion, $diferida, $autorizacion, $token) {
-        $query = "UPDATE cab_auditoria SET transaccion = " . "'" . $transaccion . "'" . ", diferida = " . "'" . $diferida . "'" . ", nroautorizacion = " . "'" . $autorizacion . "'" . ", token = " . "'" . $token . "'" . 
-                 " WHERE nroauditoria = " . '"' . $nroauditoria . '"';
+        $query = "UPDATE cab_auditoria SET transaccion = " . "'" . $transaccion . "'" . ", diferida = " . "'" . $diferida . "'" . ", nroautorizacion = " . "'" . $autorizacion . "'" . ", token = " . "'" . $token . "'" .
+                " WHERE nroauditoria = " . '"' . $nroauditoria . '"';
         $result = mysql_query($query);
     }
 
@@ -2230,6 +2230,15 @@ class cAuditoria {
         $this->res = mysql_query($query);
         //echo $query;
         return $this->res;
+    }
+
+    function getMontoCoseguro($codos, $codigo) {
+       
+        $va = $this->detalle->getValorAnalisis($codigo, $codos, $this->utiles->getPeriodoActual());
+        $vc = $this->detalle->getValorCoseguro($codigo, $codos, $this->utiles->getPeriodoActual());
+        
+        return $vc - $va;
+        
     }
 
 }
