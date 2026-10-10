@@ -345,7 +345,8 @@ class cItemsAuditoria {
         if ($monto == 0) {
             $aran = $this->arancel->getArancelNBUDiferencial($codigoos, $periodo);
             $this->cNBU->getObject($codigo);
-            $monto = $this->cNBU->getUnidad() * $aran;
+            //$monto = $this->cNBU->getUnidad() * $aran;
+            $monto = $this->cNBU->getUnidadObsocial($codos) * $aran;            
         }
         return $monto;
     }

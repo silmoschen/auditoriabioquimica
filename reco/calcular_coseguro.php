@@ -121,20 +121,18 @@ session_start();
                 var aleatorio = Math.random();
 
                 var ajaxcos = objetoAjax();
-                ajaxcos.open('GET', './operaciones/get_monto_coseguro.php?codos=' + codos + '&codigo=' + xcodigo + '&aleatorio=' + aleatorio);
-                ajaxcos.onreadystatechange = function () {
-                    if (ajaxcos.readyState == 4) {
-                        var n = parseFloat(ajaxcos.responseText.replace(/^\s+|\s+$/g, '').replace(',', '.'));
-                        if (isNaN(n)) {
-                            n = 0;
-                        }
-                        colCoseguro.setAttribute('monto', n);
-                        colCoseguro.innerHTML = FormatearNumero(n);
-                        SumarCoseguro();
-                        MostrarProcesando(false);
-                    }
-                }
+                ajaxcos.open('GET', './operaciones/get_monto_coseguro.php?codos=' + codos + '&codigo=' + xcodigo + '&aleatorio=' + aleatorio, false);
                 ajaxcos.send(null);
+                if (ajaxcos.readyState == 4 && ajaxcos.status == 200) {
+                    var n = parseFloat(ajaxcos.responseText.replace(/^\s+|\s+$/g, '').replace(',', '.'));
+                    if (isNaN(n)) {
+                        n = 0;
+                    }                    
+                    colCoseguro.setAttribute('monto', n);
+                    colCoseguro.innerHTML = FormatearNumero(n);
+                    SumarCoseguro();
+                    MostrarProcesando(false);
+                }
             }
 
             function SumarCoseguro() {
@@ -168,6 +166,18 @@ session_start();
             }
 
             function CambiarOS() {
+                document.getElementById('codigo').value = '';
+                document.getElementById('descrip').innerHTML = '';
+                var tabla = document.getElementById('tablaPracticas');
+                var i = tabla.rows.length - 1;
+                while (i > 0) {
+                    if (tabla.rows[i].id != 'pieCoseguro') {
+                        tabla.deleteRow(i);
+                    }
+                    i--;
+                }
+                document.getElementById('totalCoseguro').innerHTML = '<b>0,00</b>';
+                MostrarTablaPracticas();
                 document.getElementById('codigo').focus();
                 return false;
             }

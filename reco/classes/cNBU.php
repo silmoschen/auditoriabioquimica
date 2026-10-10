@@ -83,7 +83,7 @@ class cNBU {
 
     function getUnidad() {
         $unidad = $this->unidad;
-        
+
         // Prorrateamos la mas reciente - Normales        
         $query = "SELECT unidades FROM nbu_unidades WHERE codigo = '" . $this->getCodigo() . "' order by periodo desc limit 0, 1";
         $resultado = mysql_query($query);
@@ -93,39 +93,37 @@ class cNBU {
 
         return $unidad;
     }
-    
+
     function getUnidadObsocial($codos) {
         $unidad = $this->unidad;
-        
+
         $found = false;
-        
+
         // Prorrateamos la mas reciente - Adicionales - 20/07/2026       
-        $query = "SELECT unidad FROM nbu_os WHERE codigo = '" . $this->getCodigo() . "' and codos = '" . $codos  . "'  limit 0, 1";        
+        $query = "SELECT unidad FROM nbu_os WHERE codigo = '" . $this->getCodigo() . "' and codos = '" . $codos . "'  limit 0, 1";
         $resultado = mysql_query($query);
         while ($fila = mysql_fetch_array($resultado)) {
             $unidad = $fila['unidad'];
-            $this->unidad = $unidad;        
+            $this->unidad = $unidad;
             $found = true;
         }
-        
+
         if ($found) {
             $this->unidad = $unidad;
             return $unidad;
             exit;
         }
-        
+
         //======================================================================
-        
-         // Prorrateamos la mas reciente - Normales        
+        // Prorrateamos la mas reciente - Normales        
         $query = "SELECT unidades FROM nbu_unidades WHERE codigo = '" . $this->getCodigo() . "' order by periodo desc limit 0, 1";
         $resultado = mysql_query($query);
         while ($fila = mysql_fetch_array($resultado)) {
             $unidad = $fila['unidades'];
             $this->unidad = $unidad;
         }
-        
+
         return $unidad;
-        
     }
 
     function getUnidadNbu() {
@@ -390,6 +388,20 @@ class cNBU {
             return $valor;
         }
         return "'" . mysql_real_escape_string($valor) . "'";
+    }
+
+    function getObrasSociales() {
+        $query = "SELECT DISTINCT(nbu_os.codos), obsocial.nombre FROM nbu_os, obsocial WHERE nbu_os.codos = obsocial.codos ORDER BY obsocial.nombre";
+        $this->res = mysql_query($query);
+        return $this->res;
+    }
+
+    function getPracticasObraSocial($codos) {
+        mysql_query("SET NAMES utf8");
+        $codos = mysql_real_escape_string($codos);
+        $query = "SELECT codigo, descrip, unidad FROM nbu_os WHERE codos = '$codos' ORDER BY codigo";
+        $this->res = mysql_query($query);
+        return $this->res;
     }
 
 }

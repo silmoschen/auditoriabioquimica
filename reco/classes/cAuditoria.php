@@ -2237,7 +2237,10 @@ class cAuditoria {
         $va = $this->detalle->getValorAnalisis($codigo, $codos, $this->utiles->getPeriodoActual());
         $vc = $this->detalle->getValorCoseguro($codigo, $codos, $this->utiles->getPeriodoActual());
         
-        return $vc - $va;
+        $mc = $vc - $va;       
+        
+        return $mc;
+        
         
     }
 
