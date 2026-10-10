@@ -242,7 +242,155 @@ class cNBU {
         $query = "DELETE FROM nbu_unidades WHERE codigo = '$codigo' AND periodo = '$periodo'";
         $this->sql = $query;
         $result = mysql_query($query);
-    }    
+    }
+
+    function importarNbuObrasSociales() {
+        $archivo = dirname(__FILE__) . '/../work/import/nomenclados_os.json';
+        if (!file_exists($archivo)) {
+            return 'No se encontró el archivo nomenclados_os';
+        }
+
+        $items = json_decode(file_get_contents($archivo), true);
+        if (!is_array($items)) {
+            return 'El archivo nomenclados_os no tiene un JSON válido';
+        }
+
+        mysql_query("SET NAMES utf8");
+        if (!mysql_query("UPDATE nbu_os SET sincro = NULL")) {
+            return 'No se pudo iniciar la sincronización de nbu_os';
+        }
+
+        foreach ($items as $item) {
+            if (!is_array($item) || !isset($item['codos']) || !isset($item['codigo'])) {
+                return 'Hay un ítem sin codos o código';
+            }
+
+            $codos = mysql_real_escape_string($item['codos']);
+            $codigo = mysql_real_escape_string($item['codigo']);
+            $existe = false;
+            $resultado = mysql_query("SELECT codigo FROM nbu_os WHERE codos = '$codos' AND codigo = '$codigo' LIMIT 1");
+            if ($resultado && mysql_fetch_array($resultado)) {
+                $existe = true;
+            }
+
+            $columnas = array();
+            $valores = array();
+            foreach ($item as $columna => $valor) {
+                if (!preg_match('/^[A-Za-z0-9_]+$/', $columna)) {
+                    return 'Columna inválida en nomenclados_os';
+                }
+                $columnas[] = $columna;
+                $valores[] = $this->valorSqlNbuOs($valor);
+            }
+            $columnas[] = 'sincro';
+            $valores[] = "'*'";
+
+            if ($existe) {
+                $set = array();
+                for ($i = 0; $i < count($columnas); $i++) {
+                    $set[] = $columnas[$i] . ' = ' . $valores[$i];
+                }
+                $query = "UPDATE nbu_os SET " . implode(', ', $set) . " WHERE codos = '$codos' AND codigo = '$codigo'";
+            } else {
+                $query = "INSERT INTO nbu_os (" . implode(', ', $columnas) . ") VALUES (" . implode(', ', $valores) . ")";
+            }
+
+            $this->sql = $query;
+            if (!mysql_query($query)) {
+                return 'Error al importar el nomenclador';
+            }
+        }
+
+        if (!mysql_query("DELETE FROM nbu_os WHERE sincro IS NULL OR sincro <> '*'")) {
+            return 'Error al eliminar el nomenclador no sincronizado';
+        }
+        if (!mysql_query("UPDATE nbu_os SET sincro = NULL")) {
+            return 'Error al dejar sincro lista para la próxima actualización';
+        }
+
+        return 'OK';
+    }
+
+    function importarNbuObrasSocialesUnidades() {
+        $archivo = dirname(__FILE__) . '/../work/import/nomenclados_os_un.json';
+        if (!file_exists($archivo)) {
+            return 'No se encontró el archivo nomenclados_os_un';
+        }
+
+        $items = json_decode(file_get_contents($archivo), true);
+        if (!is_array($items)) {
+            return 'El archivo nomenclados_os_un no tiene un JSON válido';
+        }
+
+        mysql_query("SET NAMES utf8");
+        if (!mysql_query("UPDATE nbu_os_unidades SET sincro = NULL")) {
+            return 'No se pudo iniciar la sincronización de nbu_os_unidades';
+        }
+
+        foreach ($items as $item) {
+            if (!is_array($item) || !isset($item['codos']) || !isset($item['codigo']) || !isset($item['periodo1'])) {
+                return 'Hay un ítem sin codos, código o periodo1';
+            }
+
+            $codos = mysql_real_escape_string($item['codos']);
+            $codigo = mysql_real_escape_string($item['codigo']);
+            $periodo1 = mysql_real_escape_string($item['periodo1']);
+            $existe = false;
+            $resultado = mysql_query("SELECT codigo FROM nbu_os_unidades WHERE codos = '$codos' AND codigo = '$codigo' AND periodo1 = '$periodo1' LIMIT 1");
+            if ($resultado && mysql_fetch_array($resultado)) {
+                $existe = true;
+            }
+
+            $columnas = array();
+            $valores = array();
+            foreach ($item as $columna => $valor) {
+                if (!preg_match('/^[A-Za-z0-9_]+$/', $columna)) {
+                    return 'Columna inválida en nomenclados_os_un';
+                }
+                $columnas[] = $columna;
+                $valores[] = $this->valorSqlNbuOs($valor);
+            }
+            $columnas[] = 'sincro';
+            $valores[] = "'*'";
+
+            if ($existe) {
+                $set = array();
+                for ($i = 0; $i < count($columnas); $i++) {
+                    $set[] = $columnas[$i] . ' = ' . $valores[$i];
+                }
+                $query = "UPDATE nbu_os_unidades SET " . implode(', ', $set) . " WHERE codos = '$codos' AND codigo = '$codigo' AND periodo1 = '$periodo1'";
+            } else {
+                $query = "INSERT INTO nbu_os_unidades (" . implode(', ', $columnas) . ") VALUES (" . implode(', ', $valores) . ")";
+            }
+
+            $this->sql = $query;
+            if (!mysql_query($query)) {
+                return 'Error al importar las unidades del nomenclador';
+            }
+        }
+
+        if (!mysql_query("DELETE FROM nbu_os_unidades WHERE sincro IS NULL OR sincro <> '*'")) {
+            return 'Error al eliminar las unidades no sincronizadas';
+        }
+        if (!mysql_query("UPDATE nbu_os_unidades SET sincro = NULL")) {
+            return 'Error al dejar sincro lista para la próxima actualización';
+        }
+
+        return 'OK';
+    }
+
+    function valorSqlNbuOs($valor) {
+        if (is_null($valor)) {
+            return 'NULL';
+        }
+        if (is_bool($valor)) {
+            return $valor ? '1' : '0';
+        }
+        if (is_int($valor) || is_float($valor)) {
+            return $valor;
+        }
+        return "'" . mysql_real_escape_string($valor) . "'";
+    }
 
 }
 
